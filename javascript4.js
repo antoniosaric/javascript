@@ -24,9 +24,9 @@
 // anotherPerson.age = 34;
 // console.log(anotherPerson);
 
-function person (args) {
-  this.name = args.name,
-  this.age = args.age,
+function Person (name, age) {
+  this.name = name,
+  this.age = age,
   this.details = {
     hobbies: ['sports', 'cookies'],
     location: 'germany'
@@ -45,11 +45,27 @@ function person (args) {
 // person.name = "bill";
 // console.log(person.name);
 
-var anotherPerson = new person("anna", 30);
-console.log(anotherPerson);
+var anna = new Person("anna", 30);
+console.log(anna);
 
-person.prototype.stan = function(){
+Person.prototype.yell = function(){
   console.log("blahhhh");
 }
 
-anotherPerson.stan();
+anna.yell();
+
+console.log(anna instanceof Person);
+
+function AnotherPerson(args){
+  console.log(args);
+  this.name = args.name,
+  this.age = args.age
+}
+
+var max = new AnotherPerson({name: "max", age: 56});
+
+console.log(max);
+
+
+
+
