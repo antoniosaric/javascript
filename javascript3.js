@@ -21,5 +21,7 @@ console.log(1 !== "1"); // true becasue it is not equal.
 
 a == b ? console.log("Equal") : console.log("Not Equal")
 
-//primite type
+//primite type. If you assign a new varible to a primative type it make a new object.
 // var a = 5;
+
+//reference types. If you edit an object it can affect all objects associated with it
