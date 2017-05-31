@@ -51,7 +51,17 @@ account.name = "max";
 console.log(account.name);
 
 
+// var person = {
+//   name: 'Max',
+//   age: 27
+// }
 
+// console.log('name' in person);
+
+// for (var field in person){
+//   console.log(field)
+//   console.log(person[field])
+// }
 
 
 
