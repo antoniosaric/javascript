@@ -59,4 +59,8 @@ var arr = ["4","5","6","7"]
 console.log(array.concat(arr));
 console.log(array);
 
+var reduce = array.reduce(function(total, value){
+  return total + value;
+})
 
+console.log(reduce);
