@@ -15,7 +15,7 @@
 var a = 2;
 var b = 3;
 
-console.log(3%2);
+// console.log(3%2);
 
 console.log(1 !== "1"); // true becasue it is not equal.
 
@@ -39,20 +39,24 @@ array[1] = 100;
 
 console.log(array.indexOf(100)); // finds index of 100 which is 1
 array[array.indexOf(100)] = 10;
-console.log(array);
+// console.log(array);
 
   var apple = array.filter(function(value){
     return value > 2;
 })
 
-console.log(apple);
+// console.log(apple);
 
   var pickle = array.map(function(value){
     return value * 2;
   })
 
-console.log(pickle);
+// console.log(pickle);
 
-console.log(array.reverse());
+var arr = ["4","5","6","7"]
+
+// console.log(array.reverse());
+console.log(array.concat(arr));
+console.log(array);
 
 
