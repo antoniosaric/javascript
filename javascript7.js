@@ -23,7 +23,11 @@ console.log(parseInt(a));
 //Math.sum(number)
 //to make random number Math.floor(Math.random() * 100) + 1      
 
+var today = new Date()
 
-
-
+var string = 'abc';
+var pattern = /ab/;
+//console.log(pattern.exec(string)); gives ['ab']
+//console.log(pattern.test(string)); returns true or false
+//console.log(string.match(pattern)); gives ['ab']
 
