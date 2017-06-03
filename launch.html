@@ -2,11 +2,28 @@
 <html>
 <head>
   <title></title>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascript9.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascriptproject.js"></script>
+  <script type="text/javascript" src="javascriptproject1.js"></script>
+  <script type="text/javascript" src="javascriptproject2.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 style="color: black;" id="apple">Hello</h1>
-  <button>Button</button>
+  <header>
+    <h1>TheSuper Awesome Weather App</h1>
+  </header>
+  <div class="main">
+    <div class="search">
+      <label for='city'> City Name</label>
+      <input type="text" id="city">
+      <button type="button">Show Weather</button>
+      <div id="load">Loading...</div>
+      <div id="weather">
+        <h1 id="weatherCity">City Name</h1>
+        <div id="weatherDescription">Weather Description</div>
+        <div id="weatherTemperature">Temperature</div>
+      </div>
+    </div> 
+  </div>
 </body>
 </html>
