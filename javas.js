@@ -2,6 +2,11 @@
 
 
 (function(){
+
+  var myData= "my new data blah blah blah"
+  var myPost = "nameKey=value&mydata="+encodeURIComponent(myData);
+  console.log(myPost);
+
   document.getElementById('button').onclick = showData;
   function showData(){
   var httpRequest = new XMLHttpRequest();
