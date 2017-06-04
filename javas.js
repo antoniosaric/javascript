@@ -3,15 +3,18 @@
 
 (function(){
 
-  var myData= "my new data blah blah blah"
-  var myPost = "nameKey=value&mydata="+encodeURIComponent(myData);
-  console.log(myPost);
+
+  // console.log(myPost);
 
   document.getElementById('button').onclick = showData;
   function showData(){
-  var httpRequest = new XMLHttpRequest();
+    var myData = document.getElementById('ktext').value; 
+    var nameKey = document.getElementById('dtext').value; 
 
-  httpRequest.onreadystatechange = function(){
+    var myPost = "nameKey="+encodeURIComponent(nameKey)+"&mydata="+encodeURIComponent(myData);
+    var httpRequest = new XMLHttpRequest();
+
+    httpRequest.onreadystatechange = function(){
   if (this.readyState === XMLHttpRequest.DONE && this.status === 200){
     console.log(JSON.parse(this.responseText)[0].title)
     document.getElementById('header').append(JSON.parse(this.responseText)[0].title)
@@ -21,8 +24,9 @@
   }
 
   };
-    httpRequest.open('GET', 'http://jsonplaceholder.typicode.com/posts', true)
-  httpRequest.send();
+    httpRequest.open('POST', 'ph.php', true)
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    httpRequest.send(myPost);
 }
 })();
 
