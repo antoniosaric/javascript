@@ -30,3 +30,31 @@
   }
 })();
 
+
+function main() {
+    
+    var n = parseInt(readLine());
+    var binary = (n >>> 0).toString(2);
+    var count = 0;
+    var highcount = 0;
+    function onecount(input){
+
+        for (var i = 0; i < binary.length; i++) {
+            if(binary.charAt(i) == 1 && binary.charAt(i+1) == 1){
+                count++
+                count++
+              if (binary.charAt(i+2) == 1){ 
+                  count--
+              }
+            } else if (binary.charAt(i) == 0){
+                    highcount = count;
+                    count = 0;
+            }
+        }
+        console.log(highcount);
+    }
+    onecount(binary)
+    
+}
+
+
