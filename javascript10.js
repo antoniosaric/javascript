@@ -36,6 +36,8 @@ $( document ).ready(function() {
 
   var answer = parseInt(prompt("Please put your answer here"));
 
+  questions[n].checkAnswer(answer);
+
   // if (something != null) {
 
   // } else if (something == "exit"){
